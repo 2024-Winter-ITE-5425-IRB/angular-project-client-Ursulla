@@ -1,0 +1,43 @@
+<h1>Register - Reactive</h1>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form [formGroup] = "registerForm" (ngSubmit)="onSubmit">
+                First Name:
+                <input type="text" formControlName="firstName"/>
+                @if(registerForm.get('firstName')?.invalid && registerForm.get('firstName')?.touched)
+                {<span>First Name is required</span>}
+                @if(registerForm.controls.firstName.errors?.['minlength'])
+                {<span>First Name must be at least 2 characters!</span>}
+                <br />
+                Last Name:
+                <input type="text" formControlName="lastName"/>
+                @if(registerForm.get('lastName')?.invalid && registerForm.get('lastName')?.touched)
+                {<span>Last Name is required</span>}
+                @if(registerForm.controls.lastName.errors?.['minlength'])
+                {<span>Last Name must be at least 2 characters!</span>}
+                <br />
+                Email Address:
+                <input type="email" formControlName="email"/>
+                @if(registerForm.get('email')?.invalid && registerForm.get('email')?.touched)
+                {<span>Email is required</span>}
+                <br />
+                Password:
+                <input type="password" formControlName="password"/>
+                @if(registerForm.get('password')?.invalid && registerForm.get('password')?.touched)
+                {<span>Password is required</span>}
+                @if(registerForm.controls.password.errors?.['minlength'])
+                {<span>Password must be at least 6 characters</span>}
+                <br />
+                Confirm Password:
+                <input type="password" formControlName="confirmPassword"/>
+                @if(registerForm.get('confirmPassword')?.invalid && registerForm.get('confirmPassword')?.touched)
+                {<span>Confirm Password is required</span>}
+                @if(registerForm.controls.confirmPassword.errors?.['MustMatch'] && registerForm.get('confirmPassword')?.touched)
+                {<span>Password and Confirm Password do not match</span>}
+                <br />
+                <input type="Submit" value="Register" [disabled]="!registerForm.valid" />
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<h1>Login - Template Driven</h1>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+                Email Address:
+                <input type="email" ngModel name="email" #email="ngModel" required />
+                @if(email.invalid && email.touched){<span>Email is required</span>}
+                <br />
+                Password:
+                <input type="password" ngModel name="password" #password="ngModel" required />
+                @if(password.invalid && password.touched){<span>Password is required</span>}
+                <br />
+                <input type="Submit" value="Login" [disabled]="!myForm.form.valid" />
+            </form>
+        </div>
+    </div>
+</div>
