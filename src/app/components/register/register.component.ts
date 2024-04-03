@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { NgForm, FormGroup,FormControl, Validators, ReactiveFormsModule, ValidationErrors, AbstractControl, ValidatorFn } from '@angular/forms';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, RouterLink, RouterLinkActive],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })

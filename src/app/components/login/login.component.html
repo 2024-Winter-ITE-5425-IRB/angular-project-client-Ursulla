@@ -1,17 +1,28 @@
-<h1>Login - Template Driven</h1>
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-md-6 offset-md-3">
+<div class="text-center login-header">
+    <h1 class="login-title">Login</h1>
+    <img src="/assets/images/RoomRez.png" alt="Logo" class="login-logo">
+</div>
+<div class="container login-container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
             <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+                <div class="form-group">
                 Email Address:
                 <input type="email" ngModel name="email" #email="ngModel" required />
-                @if(email.invalid && email.touched){<span>Email is required</span>}
-                <br />
+                @if(email.invalid && email.touched){<div class = "text-danger">Email is required</div>} 
+            </div>
+            <div class="form-group">
                 Password:
                 <input type="password" ngModel name="password" #password="ngModel" required />
                 @if(password.invalid && password.touched){<span>Password is required</span>}
-                <br />
+            </div>
+            <div class="form-group">
                 <input type="Submit" value="Login" [disabled]="!myForm.form.valid" />
+            </div>
+            <div class="form-group">
+                Don't have an account?&nbsp;
+                <a routerLink="/register" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Register</a>
+            </div>
             </form>
         </div>
     </div>
