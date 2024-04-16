@@ -89,6 +89,10 @@ nav li a.active, nav li a:hover:not(.active) {
     margin-top: 1rem; 
 }
 
+.rooms-container {
+    margin-top: 1rem; 
+}
+
 .container {
     background: #fff;
     padding: 2rem;
