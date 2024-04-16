@@ -1,0 +1,90 @@
+/* styles.css */
+
+/* Style the search room container */
+.search-room {
+    margin-bottom: 20px;
+    text-align: center; /* Center align the search input */
+    font-size: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  /* Style the search input */
+  .search-room input {
+    padding: 12px;
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    width: 80%; /* 80% width */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    font-size: 16px;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    margin-right: 10px; /* Add some space to the right */
+  }
+  
+  /* Style the search input on focus */
+  .search-room input:focus {
+    border-color: #007bff; /* Blue border color on focus */
+    outline: none; /* Remove default focus outline */
+  }
+  
+  /* Style the search button */
+  .search-button {
+    background-color: #007bff; /* Blue background color */
+    color: #fff; /* White text color */
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+  
+  /* Style the search button on hover */
+  .search-button:hover {
+    background-color: #0056b3; /* Darker blue background color on hover */
+  }
+  
+  /* Style the search result */
+  .search-result {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  /* styles.css */
+
+/* Style the room details container */
+.room-details {
+    background-color: #f9f9f9; /* Light grey background */
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  }
+  
+  /* Style room detail paragraphs */
+  .room-details p {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  }
+  
+  /* Style room detail labels */
+  .room-details .label {
+    font-weight: bold;
+  }
+  
+  /* Style room detail values */
+  .room-details .value {
+    margin-left: 10px;
+  }
+  
+  /* Style room detail image */
+  .room-details img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  
+
+  

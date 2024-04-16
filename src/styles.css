@@ -104,6 +104,17 @@ nav li a.active, nav li a:hover:not(.active) {
     max-width: 600px; 
 }
 
+.container2 {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px; 
+}
+
 .text-danger {
     color: #dc3545; 
 }

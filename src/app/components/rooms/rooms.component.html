@@ -3,69 +3,38 @@
   <img src="/assets/images/RoomRez.png" alt="Logo" class="login-logo">
 </div>
 
-<div class="container rooms-container">
+<div class="container2 rooms-container">
   <div class="row justify-content-center">
       <div class="col-md-6">
-        <button (click)="addnewRoom()">Add Room</button>
+        <!-- <button (click)="addnewRoom()">Add Room</button>
 <button (click)="updatetheRoom()">Update Room</button>
-<button (click)="deletetheRoom()">delete Room</button>
-@for(r of rooms; track r.roomID){
-<div>
-  <p>Id - {{ r.roomID }}</p>
-  <p>Name - {{ r.roomName }}</p>
-  <p>Location - {{ r.roomLocation }}</p>
-  <p>Price - {{ r.roomPrice }}</p>
-  <p>CheckIn - {{ r.roomCheckIn }}</p>
-  <p>CheckOut - {{ r.roomCheckOut }}</p>
-  <p>Rating - {{ r.roomRating }}</p>
-  <p>Image - {{ r.imageURL }}</p>
-
-  <hr />
+<button (click)="deletetheRoom()">delete Room</button> -->
+<h2 class="login-title">Initialize to view room</h2>
+<br />
+<div class="search-room">
+  Search <input [(ngModel)]="search" /> <br>
+ {{ search }}
 </div>
-} 
-    <!-- <div class="room">
-      <img src="https://via.placeholder.com/150" alt="Room Image">
-      <h3>Room 101</h3>
-      <p>Cozy and comfortable single room with a stunning view.</p>
+
+<div *ngIf="!isHidden">
+  <div *ngFor="let r of rooms; trackBy: trackByRoomID">
+    <div *ngIf="search === '' || r.roomName.toLowerCase().includes(search.toLowerCase()) || r.roomLocation.toLowerCase().includes(search.toLowerCase())">
+      <div class="room-details">
+        <p> <img src="/assets{{ r.imageURL }}" alt="Room Image" class="room-image"></p>
+        <p><span class="label">Name:</span> <span class="value">{{ r.roomName }}</span> |
+        <span class="label">Location:</span> <span class="value">{{ r.roomLocation }}</span> |
+        <span class="label">Price:</span> <span class="value">{{ r.roomPrice }}</span></p>
+        <p><span class="label">CheckIn:</span> <span class="value">{{ r.roomCheckIn | date }}</span> |
+        <span class="label">CheckOut:</span> <span class="value">{{ r.roomCheckOut | date }}</span></p>
+        <p><span class="label">Rating:</span> <span class="value">{{ r.roomRating }}</span></p>
+      </div>
+      
+
+      <hr />
     </div>
-    <div class="room">
-      <img src="https://via.placeholder.com/150" alt="Room Image">
-      <h3>Room 202</h3>
-      <p>Spacious double room with modern amenities for a relaxing stay.</p>
-    </div>
-    <div class="room">
-      <img src="https://via.placeholder.com/150" alt="Room Image">
-      <h3>Room 303</h3>
-      <p>Luxurious suite with a private balcony and panoramic sea views.</p>
-    </div> -->
-    <!-- Add more rooms as needed -->
+  </div>
+</div>
   </div>
   </div>
 </div>
 
-
-<!-- <div class="container login-container">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
-                <div class="form-group">
-                Email Address:
-                <input type="email" ngModel name="email" #email="ngModel" required />
-                @if(email.invalid && email.touched){<div class = "text-danger">Email is required</div>} 
-            </div>
-            <div class="form-group">
-                Password:
-                <input type="password" ngModel name="password" #password="ngModel" required />
-                @if(password.invalid && password.touched){<div class = "text-danger">Password is required</div>}
-            </div>
-            <div class="form-group">
-                <input type="Submit" value="Login" [disabled]="!myForm.form.valid" />
-            </div>
-            <div class="form-group">
-                Don't have an account?&nbsp;
-                <a routerLink="/register" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Register</a>
-            </div>
-            </form>
-        </div>
-    </div>
-</div> -->

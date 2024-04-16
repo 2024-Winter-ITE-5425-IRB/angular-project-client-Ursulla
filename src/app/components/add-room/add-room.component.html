@@ -7,6 +7,49 @@
     <div class="row justify-content-center">
         <div class="col-md-6">
 
+          <form [formGroup]="roomForm" (ngSubmit)="onSubmit2()">
+            Name: <input type="text" formControlName="roomName" /> <br />
+            @if(roomForm.get('roomName')?.invalid &&
+            roomForm.get('roomName')?.touched){<span>Name is required</span>}
+            @if(roomForm.controls.roomName.errors?.['minlength']){<span
+              >Name with at least 3 letter</span
+            >}
+
+            Location: <input type="text" formControlName="roomLocation" /> <br />
+            @if(roomForm.get('roomLocation')?.invalid &&
+            roomForm.get('roomLocation')?.touched){<span>Location is required</span>}
+            @if(roomForm.controls.roomLocation.errors?.['minlength']){<span
+              >Location with at least 3 letter</span
+            >}
+          
+            <br />
+            Price:
+            <input type="text" formControlName="roomPrice" /> <br />
+
+            <br />
+            CheckIn:
+            <input type="text" formControlName="roomCheckIn" /> <br />
+
+            <br />
+            CheckOut:
+            <input type="text" formControlName="roomCheckOut" /> <br />
+
+            <br />
+            Rating:
+            <input type="text" formControlName="roomRating" /> <br />
+
+            <br />
+            Image: <input type="text" formControlName="imageURL" /> <br />
+            @if(roomForm.get('imageURL')?.invalid &&
+            roomForm.get('imageURL')?.touched){<span>ImageURL is required</span>}
+            @if(roomForm.controls.imageURL.errors?.['minlength']){<span
+              >ImageURL with at least 3 letter</span
+            >}
+
+            <input type="Submit" value="Add Room" [disabled]="!roomForm.valid" />
+          </form>
+  
+
 
         </div>
     </div>
