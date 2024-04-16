@@ -6,7 +6,24 @@
 <div class="container rooms-container">
   <div class="row justify-content-center">
       <div class="col-md-6">
-    <div class="room">
+        <button (click)="addnewRoom()">Add Room</button>
+<button (click)="updatetheRoom()">Update Room</button>
+<button (click)="deletetheRoom()">delete Room</button>
+@for(r of rooms; track r.roomID){
+<div>
+  <p>Id - {{ r.roomID }}</p>
+  <p>Name - {{ r.roomName }}</p>
+  <p>Location - {{ r.roomLocation }}</p>
+  <p>Price - {{ r.roomPrice }}</p>
+  <p>CheckIn - {{ r.roomCheckIn }}</p>
+  <p>CheckOut - {{ r.roomCheckOut }}</p>
+  <p>Rating - {{ r.roomRating }}</p>
+  <p>Image - {{ r.imageURL }}</p>
+
+  <hr />
+</div>
+} 
+    <!-- <div class="room">
       <img src="https://via.placeholder.com/150" alt="Room Image">
       <h3>Room 101</h3>
       <p>Cozy and comfortable single room with a stunning view.</p>
@@ -20,7 +37,7 @@
       <img src="https://via.placeholder.com/150" alt="Room Image">
       <h3>Room 303</h3>
       <p>Luxurious suite with a private balcony and panoramic sea views.</p>
-    </div>
+    </div> -->
     <!-- Add more rooms as needed -->
   </div>
   </div>
