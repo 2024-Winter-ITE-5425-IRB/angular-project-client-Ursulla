@@ -19,7 +19,7 @@ export interface IRooms {
 })
 
 export class RoomsService {
-  private url: string = 'http://localhost:3000/room-list';
+  private url: string = 'https://angular-server-room-rez.onrender.com/room-list';
 
   constructor(private http: HttpClient) {}
   getRooms(): Observable<IRooms[]> {
