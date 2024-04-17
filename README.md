@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Angular Project
 
 Backend Ursulla: angular-project-server-Ursulla
@@ -34,3 +35,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+=======
+# angular-project-client-Ursulla
+>>>>>>> 7a5b635250a885c140cf5c82a243a10b2e0839e6
